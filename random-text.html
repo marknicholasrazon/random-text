@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="btn">generate text</button>
+<p id="generatedText">hello</p>
+
+<script type="text/javascript">
+	const btn = document.getElementById("btn");
+	const generatedText = document.getElementById("generatedText");
+
+	// dummy array
+	const texts = [
+		"text 1", 
+		"text 2", 
+		"text 3", 
+		"text 4", 
+		"text 5", 
+		"text 6", 
+		"text 7", 
+		"text 8", 
+		"text 9", 
+		"text 10", 
+	];
+
+	const newData = () => {
+		return Math.floor(Math.random() * texts.length);
+	}
+
+	btn.addEventListener("click", () => {
+		const counter = newData();
+		generatedText.textContent = texts[counter];
+	});
+
+</script>
+
+</body>
+</html>
